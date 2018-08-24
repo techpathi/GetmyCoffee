@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:text="Coffee Ordering System"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="italic"
+        android:textColor="@android:color/holo_purple"
+        android:layout_margin="16dp"
+        android:id="@+id/heading"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/minusbutton"
+        android:layout_below="@id/heading"
+        android:text="-"
+        android:textSize="40dp"
+        android:background="@android:color/holo_red_dark"
+        android:layout_margin="30sp"
+        android:onClick="decreaseCoffee"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/orders"
+        android:text="0"
+        android:textSize="80dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/heading"
+        android:layout_toRightOf="@id/minusbutton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/plusbutton"
+        android:text="+"
+        android:textSize="40dp"
+        android:background="@android:color/holo_green_light"
+        android:layout_toRightOf="@id/orders"
+        android:layout_below="@id/heading"
+        android:layout_margin="30sp"
+        android:onClick="increaseCoffee"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalTxt"
+        android:text="Bill ="
+        android:textSize="30dp"
+        android:layout_below="@id/orders"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/total"
+        android:text="0"
+        android:textSize="40dp"
+        android:layout_toRightOf="@id/orders"
+        android:layout_below="@id/orders"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="30dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resetbutton"
+        android:text="RESET"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_alignParentBottom="true"
+        android:onClick="resetCoffee"/>
+
+
+
+
+
+
+
+
+</RelativeLayout>
